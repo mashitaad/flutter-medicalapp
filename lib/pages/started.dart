@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+import 'home_page.dart';
  
 class StartedPage extends StatefulWidget {
   const StartedPage({super.key});
@@ -62,19 +64,24 @@ class _StartedPageState extends State<StartedPage> {
                   const SizedBox(
                     height: 32,
                   ),
-                  Container(
-                    height: 56,
-                    decoration: BoxDecoration(
-                      color: Colors.blueAccent,
-                      borderRadius: BorderRadius.circular(16),
-                    ),
-                    child: const Center(
-                      child: Text(
-                        "Get Started",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 16,
+                  InkWell(
+                    onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context){
+                      return const HomePage();
+                    })),
+                    child: Container(
+                      height: 56,
+                      decoration: BoxDecoration(
+                        color: Colors.blueAccent,
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                      child: const Center(
+                        child: Text(
+                          "Get Started",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16,
+                          ),
                         ),
                       ),
                     ),
